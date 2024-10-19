@@ -5,8 +5,8 @@ const doc = {
     title: "Gym Information API",
     description: "Gym Information API",
   },
-  host: "localhost:2222",
-  schemes: ["http", "https"],
+  host: "cse341-teamfinalproject.onrender.com",
+  schemes: ["https"],
 };
 
 const outputFile = "./swagger.json";

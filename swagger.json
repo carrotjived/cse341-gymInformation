@@ -5,10 +5,9 @@
     "description": "Gym Information API",
     "version": "1.0.0"
   },
-  "host": "localhost:2222",
+  "host": "cse341-teamfinalproject.onrender.com/",
   "basePath": "/",
   "schemes": [
-    "http",
     "https"
   ],
   "paths": {
