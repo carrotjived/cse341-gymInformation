@@ -3,7 +3,7 @@ const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res) => {
   //#swagger.tags=['Locations']
-  //#swagger.description = "Get all Locations"
+  //#swagger.summary = "Get all Locations"
   mongodb
     .getDatabase()
     .db()
@@ -22,7 +22,7 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   //#swagger.tags=['Locations']
-  //#swagger.description = "Get one Location by Id"
+  //#swagger.summary = "Get one Location by Id"
   if (!ObjectId.isValid(req.params.Id)) {
     res.status(400).json("Must use a valid Id to find a location.");
   }
@@ -45,7 +45,7 @@ const getSingle = async (req, res) => {
 
 const createLocation = async (req, res) => {
   //#swagger.tags=['Locations']
-  //#swagger.description = "Create a new Location"
+  //#swagger.summary = "Create a new Location"
   const location = {
     address: req.body.address,
     open: req.body.open,
@@ -70,7 +70,7 @@ const createLocation = async (req, res) => {
 
 const updateLocation = async (req, res) => {
   //#swagger.tags=['Locations']
-  //#swagger.description = "Update a Location by Id"
+  //#swagger.summary = "Update a Location by Id"
   if (!ObjectId.isValid(req.params.Id)) {
     res.status(400).json("Must use a valid location id to update location.");
   }
@@ -97,7 +97,7 @@ const updateLocation = async (req, res) => {
 
 const deleteLocation = async (req, res) => {
   //#swagger.tags=['Locations']
-  //#swagger.description = "Delete Location by Id"
+  //#swagger.summary = "Delete Location by Id"
   if (!ObjectId.isValid(req.params.Id)) {
     res.status(400).json("Must use a valid location id to delete location.");
   }

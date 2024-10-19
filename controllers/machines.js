@@ -3,7 +3,7 @@ const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res) => {
   //#swagger.tags=['Machines']
-  //#swagger.description = "Get all Machine Information"
+  //#swagger.summary = "Get all Machine Information"
   mongodb
     .getDatabase()
     .db()
@@ -22,7 +22,7 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   //#swagger.tags=['Machines']
-  //#swagger.description = "Get one Machine Information by Id"
+  //#swagger.summary = "Get one Machine Information by Id"
   if (!ObjectId.isValid(req.params.Id)) {
     res.status(400).json("Must use a valid id to find machine.");
   }
@@ -45,7 +45,7 @@ const getSingle = async (req, res) => {
 
 const createMachine = async (req, res) => {
   //#swagger.tags=['Machines']
-  //#swagger.description = "Create a new Machine Information"
+  //#swagger.summary = "Create a new Machine Information"
   const machine = {
     name: req.body.name,
     requiredMembershipLevel: req.body.requiredMembershipLevel,
@@ -71,7 +71,7 @@ const createMachine = async (req, res) => {
 
 const updateMachine = async (req, res) => {
   //#swagger.tags=['Machines']
-  //#swagger.description = "Update Machine by Id"
+  //#swagger.summary = "Update Machine by Id"
   if (!ObjectId.isValid(req.params.Id)) {
     res.status(400).json("Must use a valid machine id to update machine.");
   }
@@ -99,7 +99,7 @@ const updateMachine = async (req, res) => {
 
 const deleteMachine = async (req, res) => {
   //#swagger.tags=['Machines']
-  //#swagger.description = "Delete Machine by Id"
+  //#swagger.summary = "Delete Machine by Id"
   if (!ObjectId.isValid(req.params.Id)) {
     res.status(400).json("Must use a valid machine id to delete machine.");
   }

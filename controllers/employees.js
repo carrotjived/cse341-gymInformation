@@ -3,8 +3,7 @@ const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res) => {
   //#swagger.tags=['Employees']
-  //#swagger.description = "Get All Employees"
-
+  //#swagger.summary = "Get All Employees"
   mongodb
     .getDatabase()
     .db()
@@ -23,7 +22,7 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   //#swagger.tags=['Employees']
-  //#swagger.description = "Get One Employee by Id"
+  //#swagger.summary = "Get One Employee by Id"
 
   if (!ObjectId.isValid(req.params.id)) {
     res.status(400).json("Must have a valid Employee ID to find employee");
@@ -47,7 +46,7 @@ const getSingle = async (req, res) => {
 
 const createEmployee = async (req, res) => {
   //#swagger.tags=['Employees']
-  //#swagger.description = "Create an Employee Information"
+  //#swagger.summary = "Create an Employee Information"
 
   const employee = {
     firstName: req.body.firstName,
@@ -77,7 +76,7 @@ const createEmployee = async (req, res) => {
 
 const updateEmployee = async (req, res) => {
   //#swagger.tags=['Employees']
-  //#swagger.description = "Update an Employee Information"
+  //#swagger.summary = "Update an Employee Information"
 
   if (!ObjectId.isValid(req.params.Id)) {
     res.status(400).json("Must use a valid employee id to update employee.");
@@ -109,7 +108,7 @@ const updateEmployee = async (req, res) => {
 
 const deleteEmployee = async (req, res) => {
   //#swagger.tags=['Employees']
-  //#swagger.description = "Delete an Employee Infromation by Id"
+  //#swagger.summary = "Delete an Employee Infromation by Id"
   if (!ObjectId.isValid(req.params.Id)) {
     res.status(400).json("Must use a valid employee id to delete employee.");
   }

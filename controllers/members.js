@@ -3,7 +3,7 @@ const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res) => {
   //#swagger.tags=['Members']
-  //#swagger.description = "Get all Members"
+  //#swagger.summary = "Get all Members"
   mongodb
     .getDatabase()
     .db()
@@ -22,7 +22,7 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   //#swagger.tags=['Members']
-  //#swagger.description = "Get One member by Id"
+  //#swagger.summary = "Get One member by Id"
   if (!ObjectId.isValid(req.params.Id)) {
     res.status(400).json("Must use a valid id to find a member.");
   }
@@ -45,7 +45,7 @@ const getSingle = async (req, res) => {
 
 const createMember = async (req, res) => {
   //#swagger.tags=['Members']
-  //#swagger.description = "Create a new Member"
+  //#swagger.summary = "Create a new Member"
   const member = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -75,7 +75,7 @@ const createMember = async (req, res) => {
 
 const updateMember = async (req, res) => {
   //#swagger.tags=['Members']
-  //#swagger.description = "Update a member by Id"
+  //#swagger.summary = "Update a member by Id"
   if (!ObjectId.isValid(req.params.Id)) {
     res.status(400).json("Must use a valid member id to update member.");
   }
@@ -107,7 +107,7 @@ const updateMember = async (req, res) => {
 
 const deleteMember = async (req, res) => {
   //#swagger.tags=['Members']
-  //#swagger.description = "Delete Member by Id"
+  //#swagger.summary = "Delete Member by Id"
   if (!ObjectId.isValid(req.params.Id)) {
     res.status(400).json("Must use a valid member id to delete member.");
   }

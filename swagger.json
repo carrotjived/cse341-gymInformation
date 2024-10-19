@@ -37,7 +37,8 @@
         "tags": [
           "Members"
         ],
-        "description": "Get all Members",
+        "summary": "Get all Members",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -54,7 +55,8 @@
         "tags": [
           "Members"
         ],
-        "description": "Create a new Member",
+        "summary": "Create a new Member",
+        "description": "",
         "parameters": [
           {
             "name": "body",
@@ -108,7 +110,8 @@
         "tags": [
           "Members"
         ],
-        "description": "Get One member by Id",
+        "summary": "Get One member by Id",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -124,6 +127,9 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -133,7 +139,8 @@
         "tags": [
           "Members"
         ],
-        "description": "Update a member by Id",
+        "summary": "Update a member by Id",
+        "description": "",
         "parameters": [
           {
             "name": "Id",
@@ -194,7 +201,8 @@
         "tags": [
           "Members"
         ],
-        "description": "Delete Member by Id",
+        "summary": "Delete Member by Id",
+        "description": "",
         "parameters": [
           {
             "name": "Id",
@@ -224,7 +232,8 @@
         "tags": [
           "Employees"
         ],
-        "description": "Get All Employees",
+        "summary": "Get All Employees",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -241,7 +250,8 @@
         "tags": [
           "Employees"
         ],
-        "description": "Create an Employee Information",
+        "summary": "Create an Employee Information",
+        "description": "",
         "parameters": [
           {
             "name": "body",
@@ -292,7 +302,8 @@
         "tags": [
           "Employees"
         ],
-        "description": "Get One Employee by Id",
+        "summary": "Get One Employee by Id",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -320,7 +331,8 @@
         "tags": [
           "Employees"
         ],
-        "description": "Update an Employee Information",
+        "summary": "Update an Employee Information",
+        "description": "",
         "parameters": [
           {
             "name": "Id",
@@ -378,7 +390,8 @@
         "tags": [
           "Employees"
         ],
-        "description": "Delete an Employee Infromation by Id",
+        "summary": "Delete an Employee Infromation by Id",
+        "description": "",
         "parameters": [
           {
             "name": "Id",
@@ -408,7 +421,8 @@
         "tags": [
           "Machines"
         ],
-        "description": "Get all Machine Information",
+        "summary": "Get all Machine Information",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -425,7 +439,8 @@
         "tags": [
           "Machines"
         ],
-        "description": "Create a new Machine Information",
+        "summary": "Create a new Machine Information",
+        "description": "",
         "parameters": [
           {
             "name": "body",
@@ -467,7 +482,8 @@
         "tags": [
           "Machines"
         ],
-        "description": "Get one Machine Information by Id",
+        "summary": "Get one Machine Information by Id",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -483,6 +499,9 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -492,7 +511,8 @@
         "tags": [
           "Machines"
         ],
-        "description": "Update Machine by Id",
+        "summary": "Update Machine by Id",
+        "description": "",
         "parameters": [
           {
             "name": "Id",
@@ -541,7 +561,8 @@
         "tags": [
           "Machines"
         ],
-        "description": "Delete Machine by Id",
+        "summary": "Delete Machine by Id",
+        "description": "",
         "parameters": [
           {
             "name": "Id",
@@ -571,7 +592,8 @@
         "tags": [
           "Locations"
         ],
-        "description": "Get all Locations",
+        "summary": "Get all Locations",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -588,7 +610,8 @@
         "tags": [
           "Locations"
         ],
-        "description": "Create a new Location",
+        "summary": "Create a new Location",
+        "description": "",
         "parameters": [
           {
             "name": "body",
@@ -627,7 +650,8 @@
         "tags": [
           "Locations"
         ],
-        "description": "Get one Location by Id",
+        "summary": "Get one Location by Id",
+        "description": "",
         "produces": [
           "application/json"
         ],
@@ -643,6 +667,9 @@
           "200": {
             "description": "OK"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -652,7 +679,8 @@
         "tags": [
           "Locations"
         ],
-        "description": "Update a Location by Id",
+        "summary": "Update a Location by Id",
+        "description": "",
         "parameters": [
           {
             "name": "Id",
@@ -698,7 +726,8 @@
         "tags": [
           "Locations"
         ],
-        "description": "Delete Location by Id",
+        "summary": "Delete Location by Id",
+        "description": "",
         "parameters": [
           {
             "name": "Id",
