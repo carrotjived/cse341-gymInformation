@@ -6,6 +6,7 @@ const passport = require("passport");
 const session = require("express-session");
 const GitHubStrategy = require("passport-github2").Strategy;
 const cors = require("cors");
+require("dotenv").config();
 
 const port = process.env.PORT || 2222;
 
@@ -34,7 +35,7 @@ app
   })
   .use(cors({ methods: ["GET, POST, PUT, DELETE, OPTIONS, UPDATE, PATCH"] }))
   .use(cors({ origin: "*" }))
-  .use("/", require("./routes/index.js"));
+  .use("/", require("./routes"));
 
 passport.use(
   new GitHubStrategy(
