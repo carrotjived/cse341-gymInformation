@@ -24,8 +24,8 @@ const getSingle = async (req, res) => {
   //#swagger.tags=['Employees']
   //#swagger.summary = "Get One Employee by Id"
 
-  if (!ObjectId.isValid(req.params.id)) {
-    res.status(400).json("Must have a valid Employee ID to find employee");
+  if (!ObjectId.isValid(req.params.Id)) {
+    res.status(400).json("Must use a valid employee id to find employee.");
   }
   const employeeId = ObjectId.createFromHexString(req.params.Id);
   mongodb
