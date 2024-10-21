@@ -7,6 +7,7 @@ const validate = async (req, res, next) => {
     gender: "required|string",
     email: "required|string|email",
     employeeLevel: "required|integer",
+    gymName: "required|string",
   };
 
   await validator(req.body, validationRule, {}, (err, status) => {
