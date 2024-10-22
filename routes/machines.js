@@ -5,10 +5,10 @@ const validation = require("../middleware/machines_validator");
 const { IsAuthenticated } = require("../middleware/authenticate");
 
 // Gets all of the machines in the database
-router.get("/", machinesController.getAll);
+router.get("/", IsAuthenticated, machinesController.getAll);
 
 // Gets a single machine in the database with the userId
-router.get("/:Id", machinesController.getSingle);
+router.get("/:Id", IsAuthenticated, machinesController.getSingle);
 
 // Creates a machine
 router.post("/", IsAuthenticated, validation.validate, machinesController.createMachine);

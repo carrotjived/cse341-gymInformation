@@ -6,10 +6,10 @@ const { IsAuthenticated } = require("../middleware/authenticate");
 
 
 // Gets all of the employees in the database
-router.get("/", employeesController.getAll);
+router.get("/", IsAuthenticated, employeesController.getAll);
 
 // Gets a single employee in the database with the userId
-router.get("/:Id", employeesController.getSingle);
+router.get("/:Id", IsAuthenticated, employeesController.getSingle);
 
 // Creates a employee
 router.post("/", IsAuthenticated, validation.validate, employeesController.createEmployee);

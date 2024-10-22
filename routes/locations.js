@@ -5,10 +5,10 @@ const validation = require("../middleware/locations_validator");
 const { IsAuthenticated } = require("../middleware/authenticate");
 
 // Gets all of the locations in the database
-router.get("/", locationsController.getAll);
+router.get("/", IsAuthenticated, locationsController.getAll);
 
 // Gets a single location in the database with the userId
-router.get("/:Id", locationsController.getSingle);
+router.get("/:Id", IsAuthenticated, locationsController.getSingle);
 
 // Creates a location
 router.post("/", IsAuthenticated, validation.validate, locationsController.createLocation);
