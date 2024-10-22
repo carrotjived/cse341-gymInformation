@@ -10,7 +10,7 @@ const getAll = async (req, res) => {
     .collection("employees")
     .find()
     .toArray()
-    .then((err, employees) => {
+    .then((employees, err) => {
       if (err) {
         res.status(500).json({ message: err });
       } else {
@@ -34,7 +34,7 @@ const getSingle = async (req, res) => {
     .collection("employees")
     .find({ _id: employeeId })
     .toArray()
-    .then((err, employees) => {
+    .then((employees, err) => {
       if (err) {
         res.status(500).json({ message: err });
       } else {
