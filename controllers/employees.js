@@ -55,6 +55,7 @@ const createEmployee = async (req, res) => {
     gender: req.body.gender,
     email: req.body.email,
     employeeLevel: req.body.employeeLevel,
+    gymName: req.body.gymName,
   };
 
   const response = await mongodb
