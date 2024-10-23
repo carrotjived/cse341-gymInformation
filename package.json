@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/carrotjived/cse341-gymInformation#readme",
   "dependencies": {
+    "@jest/globals": "^29.7.0",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",

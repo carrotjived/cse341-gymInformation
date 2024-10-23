@@ -5,19 +5,28 @@ const validation = require("../middleware/locations_validator");
 const { IsAuthenticated } = require("../middleware/authenticate");
 
 // Gets all of the locations in the database
-router.get("/", IsAuthenticated, locationsController.getAll);
+router.get("/", locationsController.getAll);
 
 // Gets a single location in the database with the userId
-router.get("/:Id", IsAuthenticated, locationsController.getSingle);
+router.get("/:Id", locationsController.getSingle);
 
 // Creates a location
-router.post("/", IsAuthenticated, validation.validate, locationsController.createLocation);
+router.post(
+  "/",
+  IsAuthenticated,
+  validation.validate,
+  locationsController.createLocation
+);
 
 // Updates a location
-router.put("/:Id", IsAuthenticated, validation.validate, locationsController.updateLocation);
+router.put(
+  "/:Id",
+  IsAuthenticated,
+  validation.validate,
+  locationsController.updateLocation
+);
 
 // Deletes a location
 router.delete("/:Id", IsAuthenticated, locationsController.deleteLocation);
-
 
 module.exports = router;
