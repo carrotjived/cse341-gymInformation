@@ -11,6 +11,8 @@ describe("Locations Tests", () => {
   let connection;
   let database;
 
+  beforeEach(() => jest.resetAllMocks()); 
+
   beforeAll(async () => {
     process.env.TESTING = "TRUE";
     if (!database) {
@@ -25,7 +27,6 @@ describe("Locations Tests", () => {
   /// GET REQUESTS ///
   test("gets all locations", async () => {
     const res = await request.get("/locations");
-    console.log(res);
     expect(res.header["content-type"]).toBe("application/json; charset=utf-8");
     expect(res.statusCode).toBe(200);
   });
